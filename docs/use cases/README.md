@@ -18,9 +18,9 @@
 **Передумови**:Попередня реєстрація користувач<br>
 **Результат**:Активований акаунта користучача<br>
 **Виключні ситуації**:<br>
-*EX2.1 адреса не існує
-EX2.2 лист не прийшов
-EX2.3 ключ не дійсний*
+*EX2.1 адреса не існує<br>
+EX2.2 лист не прийшов<br>
+EX2.3 ключ не дійсний*<br>
 ***Основний сценарій***:<br>
 
 ![](http://www.plantuml.com/plantuml/png/ZPArNKHX4CHZh8UJ48S8znu8SNU9S7TtXmhEtLgOxOXXWNDvBhDlVl_PRziNb_eNbfQdfygAJJouhU96xcLBjkLqLR_efcM9ryHJembliCis_BA589zkJOZ0Rk9pICxbe18nH2dv4OATIaGkJ71JkqXu82RtSDF32OziKlN2yrVALu_SAiucpVU9zj2KZMDcTcdOj30-EhPaiewCz7DBQCq3hIQy8ahV446SSf-gzVJMLTLMwAqkeGpF3AchVeatvml-7ne2Xc5VpT6HTyNr8omxSfjeHUwSJOQ39ET0D3D7VQu0YgOEbmZAjlP1wUowR3l4s6wkfWjySM8mPU9lkQUKkPm9zW8JD3l7qdPISTo-0G00)

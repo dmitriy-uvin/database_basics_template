@@ -1,5 +1,4 @@
 
-![Data Object](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/dmitriy-uvin/operating_project_system/Skvortsov/src/uml/dao.puml)
 
 
 ![Main way](http://www.plantuml.com/plantuml/png/ZPCrTcin48PxhKB7httC7EQKSHKqA4qu5vemTc6gmWimCsr1iwEC83fcjky_L_ytSEPsMhPlrNOMvWcX-F85xALLEiPy2wFC5omBzJAtJ0qupBBBjDTYgrAg7-9OBE2p6FNmUrxa9Pw0RPxWSLw04oekuH9sO1Ulmd08rt3YeJwBUdkcFtscRpv-dFLz_5YEW6iUXrqUbPWuJoAgq0XrOr1V3AgCTGu7WaPvbC8EJmihqlAmPsnVwrJmABCNCKaQhzAKb_2oYCOix1hZjthvdkNHCBfpSAAyAIdZ-2kRu7cUDeplXj4KaSNaUGc8OrN7nlwZFNiOjaNRi8zXx01_osluMMQ-4pF5Ae_H7YvlFIP7lpEnM34BsFjGtPx1_YBaTQteE-VT-d-nKcMXT_zL2uGGl85wLKU-AwtLJwCq5ANcoIKKFrhB9LK1VVohLlDQVoD47g9QVzRI7FX2I2TR3EBZyG80)

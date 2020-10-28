@@ -1,14 +1,14 @@
-**ID**:UC1
-**Назва**: Попередня реєстрація користувача
-**Учасники**: Гість, система
-**Передумови**: Відсутні
-**Результат**: Створенний акаунта користучача
-**Виключні ситуації**:
-  *EX1.1 не заповнено 1(або більше) поле
-  EX1.2 існує акаунт за введеною адресою пошти
-  EX1.3 існує акаунт із введеним юзернеймом
-  EX1.4 пароль не відповідає вимогам*        
-**Основний сценарій**:
+**ID**:UC1<br>
+**Назва**: Попередня реєстрація користувача<br>
+**Учасники**: Гість, система<br>
+**Передумови**: Відсутні<br>
+**Результат**: Створенний акаунта користучача<br>
+**Виключні ситуації**:<br>
+  *EX1.1 не заповнено 1(або більше) поле<br>
+  EX1.2 існує акаунт за введеною адресою пошти<br>
+  EX1.3 існує акаунт із введеним юзернеймом<br>
+  EX1.4 пароль не відповідає вимогам*<br>        
+**Основний сценарій**:<br>
 
 ![](http://www.plantuml.com/plantuml/png/bLL5Tbj14DmRxZ1XPcPU1PTPcjaMhyBCd9ZP5nWnIrUekL6wyb5F4Ns3XhgwghhdwseasX-EngQdUhjwkvGyZ_7Bp9eNvgNv_DXQuVFlb3VrHkSLLg3DI-JC2nHaz5kX3ArGHKLMSYX2oqBPV5D8eIWVvZdIvZSpo4YRjv9jxe85w33O89fWfb62VjmWxKypAuXLWY11P4bjNgCY2oNpgkriV1efhyqdaaZh5IMcgChCDijotei-18sKuPaNj2QDelmLU1WLb8NodENNU_he2pDVaPMWvt8cZJnAViGgDCCb_UUQPReYC0d68OKCqexzNiHNNmIB9b7leAt2RQSoyk1Pn56HiTxk1TZcTLokLSGjHBjKI90ZKaZJIDVHyxKQAIADXFZvd54MHRVeEQfdb5Mr6angzh1y1SZj7Pxk7v-wEXIGZvd3Wu7fVGryLMSFA0QW9B1ScKNYe49HvBv7MWPMuqkkd9Jysq5VkfAP9Izs8ahgc28l1j9jHIJQHHK7wy-QjuBtcfl_vpLBKbMIuIADCryflqdZA0wKh6daQGnf8z-W2nAaYGgjvb-JqlEP2KI7LNXyT2ogTeoCzClZxLqSkAomB50PQcSPQ_TkFJns-DX1nO_Z1rNztWbhxwHlQtXcI35bWoxROElp7M2-ibiqTPbNR6WgAt37QbPPJ41Jy8K6KB_OHJIHDruPWimIpkev-aV0eYHwvyNPxuF6rx3-zblttz-W5pfuuw5ewR5kXeTYNZMGwo4AMfOzaNI4ei93r8QIgustkevGyw-AG502UhkifXW9IBN2d3y81oQ61wEHE_q3lLrOmIQsiAMmY3My9PdIORmzB1MSjOWBy6UEX5z5pYyYnvPNXzJneyUFzdQn4JpigpALBx6_)
 

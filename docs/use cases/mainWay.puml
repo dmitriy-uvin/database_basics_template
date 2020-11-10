@@ -1,0 +1,35 @@
+@startuml
+
+    actor TeamLead
+    actor Dev
+    actor Guest
+    actor User
+    
+    
+
+usecase "Попередня реєстрація" as UC_12 #00fa00
+usecase "Підтвердження реєстрації" as UC_13 #00fa00
+
+usecase "Вхід в систему" as UC_14 #00fa00
+usecase "Створити проект" as UC_15 #00fa00
+
+usecase "Управляти проектами" as UC_16 #00fa00
+usecase "Управляти командою" as UC_17 #00fa00
+usecase "Управляти артефактами" as UC_18 #00fa00
+
+TeamLead -u-|> Dev
+TeamLead --> UC_17
+
+
+Dev --r-> UC_16
+Dev --> UC_18
+
+Dev -u-|> User
+User -u-|> Guest
+User -> UC_14
+User -l-> UC_15
+
+Guest -> UC_12
+Guest -l-> UC_13
+
+@enduml

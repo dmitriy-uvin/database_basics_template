@@ -1,0 +1,22 @@
+@startuml
+
+actor Dev
+actor TeamLead
+
+usecase "Управляти артефактами" as UC_16
+
+usecase "Ознайомитись з артефактом" as UC_17 #OOEAOO
+usecase "Видалити артефакт" as UC_18  #OOEAOO
+usecase "Редагувати артефакт" as UC_19  #OOEAOO
+
+usecase "Прикріпити артефакт\n до учасника проекту" as UC_20  #OOEAOO
+
+TeamLead --r-> Dev
+Dev --r-> UC_16
+
+UC_17 .u.> UC_16 : extends
+UC_18 .u.> UC_16 : extends
+UC_19 .u.> UC_16 : extends
+UC_20 .u.> UC_16 : extends
+
+@enduml

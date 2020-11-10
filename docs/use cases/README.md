@@ -28,10 +28,21 @@
 <b>Назва:</b> Додати розробника до проєкту<br>
 <b>Учасники:</b> Тім лідер, Система<br>
 <b>Передумови:</b> Користувач має акаунт в системі<br>
-<b>Результат:</b> Користувач стає Розробником в поточному проєкті<br>
+<b>Результат:</b> Користувач стає розробником в поточному проєкті<br>
 <b>Виключні ситуації:</b>
 - EX11.1 Не заповнене поле для вводу
 - EX11.2 Акаунт користувача не існує
 - EX11.3 Акаунт користувача не активовано
         
 ![UC11](http://www.plantuml.com/plantuml/png/hLMrUfn13An3xw0mSnNcAbYcDBDzN8MPEJ6pN-2OuHMaDyfe5Nzx6Fvzi3YQcPqzduz4kyFHsFZOberRDXAUkxmgarmcBk4hpHbvUDSczDCUjyLtVUiayGB7vJ7dvH4NqVfANE4ueLtXAjUuA4ze6tz5EsthI1wYatEV2IpAwpR2R9MufgFo5PiUovDjfnhAJ74SS5LESaNUeumyvIgMbu6FpINvG3ejB-M9gmbKJ2ijnSAkkBpW-4aFUH1w0PU2vWg163Z4EOqj6IX19uFfZ39nJ2igHwRMQq177Rjr6rUi7BQLETxY8JGiSi9qArzeK4yWPv8uwVLCDfAiwO40CYcJyj1smM3pAWvTUM2zLH2dz2sWy9VHSrJIyi63KRt2FEtf7-yU7ZlV5y3NnA7UmFZU_rgNwWjxgm6n1vyP1NfYRZbJrUq3kYulBpc3XgL50oBFvSFUEhlhJPq8HFifF3mu5ANj0mFTU31NzvpkEKiy3_YiGciCMkUlt3vwzD1HFzu_qUTmE-Hz2XvESW4UMX1zx3g4ZZZdZBCxu8BqtaEsJzhx-hD2rnBgRSHt6PRyko4osS6GOmVi-_Xl6xFWA2DQxl2-jdL3dfWHgCjf5U6qMs3i-XF6pIXiQ8aILzhUJGThDnDDyof9681vd30Au5LGJd5EE0SpylZK7_m4wlLr1VFwcoDVVwb3uutcfBpKOYu4DeE17qlRdc0a6WYUggzkfpaGWFFXPbQtme6H_jvev5ftJvr92xpAQxn6FCjB_9nKsY7YvtYleEsE1OwyrHQdk5gtSnPUJSAwWtJioB4ZpVGq0CP3ZJkFBlwDV0S0)
+
+<b>ID:</b> UC12<br>
+<b>Назва:</b> Підтвердження додавання розробника<br>
+<b>Учасники:</b> Користувач, Система<br>
+<b>Передумови:</b> Користувачу надіслано запрошення від Тім лідера<br>
+<b>Результат:</b> Користувач стає розробником в проєкті<br>
+<b>Виключні ситуації:</b>
+- EX12.1 Лист не було надіслано
+- EX12.2 Ключ-підтвердження не дійсний
+
+![UC12](http://www.plantuml.com/plantuml/png/jLCrjXj148nDT-Ztd7vKPkR863eKCsiTcPcPcGuWPcbqXPeRkNhtwOsP_mYsfx6wkdTtpOjKlHE5_ARrczOBpocyWB7dCB3dxGLx4IqqxDLJWItur-D7kQkJjWfUC-A2ncD4wP5WYePW1aFD06Cqg9ZQkuiqZ-qTUrNGeN3NvS3CFa67ELhe4aa7FNI367Kr_3KKrbpL4dkNkOmF-8ammg3l_pVfCb0Ksxu7jLZo4bBDfDAUR4uc8pngSsTxTAVW5GpBZp7GYj_Q3nnV3IsjEdsY6FVpVbtl5Du7ZBAJ2HgEJqVR6w8dxPZOYoHjJixYZybmJQrDMw5Vj-KchaFnON-xFFQYw9KYLVQy2_tkg0IjO5aky7ULMgECKALkzX56EkHjVxQjtxBB0cWfiPeUOxTVVXbHd4gylKPzzpjRzzs5gdcbCWrE6KmXMI9prQyn7QkMiecOLpiKYJebcVo0Z_WeREijhWWHJfO4L_XxJzadbvtUKWbj61V9W04zMh8eePNGojVmEC0v3ZAtcrU-yfy0)

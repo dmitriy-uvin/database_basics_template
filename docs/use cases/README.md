@@ -106,3 +106,53 @@ EX2.3 ключ не дійсний*<br>
 - EX10.2 дані введені некоректно <br>
 
 ![](http://www.plantuml.com/plantuml/png/hLJ5sHmn5Bjl5GuptiBSGuvXPZY5cPavgM0PXrhGwoYI_Vsp3875nv9bUxPVlBJ_mgNBfqyL2ewlg_YCr6wYPRVijjr11ILxS5Kf__B5kPSR6ns-iV2ssj2XzTRnBq6A31sxu-RZ9-geeOIgPePIXoO3DG7OdVcR-gTUnQ_0WNqnIbT7Odv7cLHJb17PSs5gOCQ-suxW9STa7og3YRte8fqvU-cmkt3ywB5BRi6H8_lvobER3snr-8eK3KHeiJdjI-tPksxjwdLvwF2PGtxOW22eKOuM8Y-8tVN2ndQ7F9sdbJ0PIuXCo-ZJeqUEATlIY_c1uzyZiUSJyH2xfRJhpakNehB4NX2x8rCqP3H2GKOpGdtPnXnbbQHLOSbhp3wQmzaMsiIK_5e-saZ6r6HYIVmQGnsdgCTFvdPhT5jl7UswtRUdqazEBM-TWTLG4uMVUWQ7ZrwlskAaiM4hxWmXJD7IsHqaREqm4DbJ9MQJBXkKplaz337oYpHKfyVVbDvsLSJEqtt85T_hEObZe0FRH1KK9_51hqSpgAAGE8bQHiH7UPL2Jjl5J9LcEFjCUsh_xMwk7tytPtdEQOSPPnvn42pJuYcHLXJhJinfxFaFxRSNpzvlwdbodZstgL3OJZfwsFu6)
+
+## Управління артефактами
+
+![UC_AR_1](http://www.plantuml.com/plantuml/png/VL8pVaHX4A-ZEynlqyQsKyMgmeUlYhFiOfjTV82rTOMP6-si_NQV__mmf3T81mRZzbPDPKsbf1Xs3s1CcDAFYqBQdXIIMbC9_4jTcMZK2qNI2z3XFqRf26tem20zqWdw06rqn0zkEkFF0NwoOGXzEf3qi3IwtjoHh_z2BuQPuiT8d1Pte6Ew0_GM6p4ZOzC9jJCpuyCpCxbcB-X35vE3w2jP9QFkWbBo7tGdv4uwHGVQj2swSonoJRxf27tCFA8FZ9RfiR8371G1EgLBnevv1bY2DaXCPWJTSHATfhDQcdAoal_qma1z_K7zG7B9-99ypSvpSgOQZ0sfRz03mc8GEwe-YNLfODtbCIvK6al-X_Y5TrGC)
+
+***ID:*** UC_AR_1<br>
+***Назва:*** Ознайомлення з артефактом<br>
+***Учасники:*** Користувач, Система<br>
+***Передумови:*** Існуючий артефакт<br>
+***Результат:*** Перелглянутий артефакт<br>
+***Виключні ситуації:***<br>
+- EX_AR.1 Щось пішло не за планом<br>
+***Основний сценарій***<br>
+
+![UC_AR_1](http://www.plantuml.com/plantuml/png/ZP83RdP158PZt5LCyiVv7FurDz2WjgtRgBPjQm6VhIsyiwE-zzJk10VFSSOe6ZMRHyon_Zx3K7mJE4D6po2cP_MSdaS0Fhqy8SXw4lnYvIXSaizPqKXGEr18mwVWHn8P91HTCyHXlG0V4bR1tASkjzA122du9jvMl4O60OGbKIgcw0Z1XwJUG1fXLJU0W3v2WaP68Qg8_PpOHpk6rAUUnAdSbmO3WsQx6kdkx3BLluwEPhuNbDTIe731y0YdZo60p3jKNjLONE5ml_ZQ1zgaselZR_SR7Cern7mSecEG9KPUE7QGbbMFvAhBibDS8OkCR4Naa24HGjYw216xXVKIJSkLPjSZ11ol5IznXtlSAmvsZIL5cd9WoO5RkQ5LTfQ7fORWcuqP7MD0mEvnULp6yxvFqnf5DEJBF000)
+
+***ID:*** UC_AR_2<br>
+***Назва:*** Видалення артефакту<br>
+***Учасники:*** Користувач, Система<br>
+***Передумови:*** Існуючий артефакт<br>
+***Результат:*** Видалений артефакт<br>
+***Виключні ситуації:***<br>
+- EX_AR_2.1 Недостатьно прав доступу<br>
+***Основний сценарій***<br>
+
+![UC_AR_2](http://www.plantuml.com/plantuml/png/ZLD36Xn16DttAVvliXtlObyWczZMU5QnRLi76BPrXLStocjtdDeK7XkbRHYE3Wv6uxDdD4qupkCj0dKPbhgYhgfhc6EgRfqdb8oOdEzM2JuGlngnuN3rNE1ZAbpx2132KTVsT8Gc5fQOmeLEm5UFXDpBrEdgEe-TA6br6lybYIRJm_HyEUeJ0ZhfiJ2EyX0ajke-RNNPqy5SlKp21QOWv6v9TgmYrSZouP7y7xKmNPqt-Clh-TiBARyBgU1fdcb5jCg_7pjNg4Uq-xbXqQ_J7HsLmSdZ9qQoujYnWnmvjERGEi5x132YNCmH_01jtR5_uxRzxNehFptQEHBx_TylqUsjrk9jadwiI-KWn_4OVbp_PVnURd5dmHQ4aIcF2DMJTalefDqdn3HTtOGU7_bCVObvlN3yWA_uXc_2OfzmKuXwTToiumjNJcnxHTsFLbYK7fLiApAgjPljffO-PjPMsy1DV0k-0m00)
+
+***ID:*** UC_AR_3<br>
+***Назва:*** Редагування артефакту<br>
+***Учасники:*** Користувач, Система<br>
+***Передумови:*** Існуючий артефакт<br>
+***Результат:*** Відредагований артефакт<br>
+***Виключні ситуації:***<br>
+- EX_AR_3.1 Недостатьно прав доступу<br>
+***Основний сценарій***<br>
+
+![UC_AR_3](http://www.plantuml.com/plantuml/png/ZLD55Y9H3DptAVAOBSvgt2ymct5tmrcDkxkx7G1tQAvG_qPJFutxnv8VgQAITdPaiYVJsTpLAuxZ2CzrV8LhRgDXxfYxvXvAA9X7rndoZcOFlKs27upVjTbeqNelwA8WjBjmqKFBt3iI5xQhee82obv31hlcbJ3_DckhvZwlMXPjSv_27m-ULHqKhe_3_OBB3bKjLBWEN6tTDi_PjYf7uYYPZnu1OQHDe0NuP3PD0ONDGxHrv22ZjuAwnIT4pO9guaTH5XMnsg1dxX5i5ck2c7a_u5wXS6xVwhAy8rINL_nsKUIditd912R45nz-iiJw9QOmpRTQuq-ieCB4BtiDw-ZG8PM58xCddiYUbVJ5ynUoik7SkPCymz2MKzi4tqcYHfqQfE9EXFOUEBvpt_5OC3AyFHi_e_sMZdwa4YMn0nZEbOhVvlWfwXsQ7yrZHgeBrc3pUckVI6vsrFN-uRa4sQM7SRn6LvVmeuxYaSwjgHILBqD1Ju4AEN1N6R9qp4EbHEPsQL0AZZh-m5_ympyXiLzuA8nsWdWOn1_TRhObq-VMGdbCJcOtRAD0D1mDEtqf1soT7NJqKVyF)
+
+
+
+***ID:*** UC_AR_4<br>
+***Назва:*** Редагування артефакту<br>
+***Учасники:*** Користувач, Система<br>
+***Передумови:*** Існуючий артефакт, учасник<br>
+***Результат:*** Прикріплений до учасника артефакт<br>
+***Виключні ситуації:***<br>
+- EX_AR_4.1 Недостатьно прав доступу<br>
+***Основний сценарій***<br>
+
+![UC_AR_4](http://www.plantuml.com/plantuml/png/dLH5TXnH3DptAVGcst2o2VC5iWapazchC3CpqmLcffclKBgHwwlDR0z-ITMbga_Upi6XKmD3mzUkUfudVDt0DrHw1udUrNjw7rsqzV4DbfgNeSUZpOAVhDzpQ6GSVH2KQ0iwo54XEzeZJDuX8DG7Q2Dpb5j6-_or7YoXGFl6PCxVgDWtj0UDis0YuFEvlY1_A4TxqDLFo1XKWbWuBjd0wIQNFj9F-a5VoIpjqTuotcanVkTos79fn1mJpY81elSvR1DN8d7OrjATyk7QMZMJHyQxzF9m6ZNjTWKrLLS8noTrUMPi3b6JvVvifbfKOOO9wf2vRV22O6GpM-cdXIr_HiSCVuBVA8X9zyaPcrYPdjwXSp9mwSB58Lbn_lmfliPBMqzl5_oWXWWv4hQjffJs7JonQ_-9ZQlNZMVFzPmrldatMEqIL14uSoGEgQVKrpJVJBEj18UVz8bjGFvCJ5Jee5iMTtfw-xPu5ZRkplTIsS1u7M-CEDTFjaYFRRbJasTQMLhTk0yGkjFGo0lr4K9BbUpApR5wWl4d_k4__Wk5_SOZORLOZKUhyPSZMq4gVU56y2Ucqg4JHxHg_ThrQxsnQHnLw-raO3V62000)

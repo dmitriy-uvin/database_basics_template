@@ -39,7 +39,7 @@ EX2.3 ключ не дійсний*<br>
 
 ![](http://www.plantuml.com/plantuml/png/XL6rMGLX4CpVtVMmtuln32T7Iy3TEIBStTsjWETkBSnsnFouiycwpTICkIsZxlX0l-CHoYJEaTLPn7LEvtK1GVXrPPAv5tcgVdVVhJB15MldJIUIj0u56VY5TWPPv93K1V5Yd_abFKROM_vroYJkdjSYWZJyNFfj0xiHXXyftU5yBehGoUYSyE8i0iYQ_UMVMcuGOJ9YRa6EbX_1btOaltyAlvZAzmacQSfuSkRf1JFWEOGuOknPrcCzaVB_uVi8uj3mf_T7UxgwNUaS6d8xHXsFusaQ7UhjQ7F7wbfQ7G-kS8y7F0Xdts1PU4gw0Ci5kAFrz0ENRHeB8MHPVuuuCq79bvAYaYB7qp7O_c5s3LtI_GW0)
 
-**ID**:UC9<br>
+**ID**:UC14<br>
 **Назва**: Видалити проект<br>
 **Учасники**: Teamlead, Система<br>
 **Передумови**: Відсутні<br>
@@ -50,7 +50,7 @@ EX2.3 ключ не дійсний*<br>
 
 ![](http://www.plantuml.com/plantuml/png/fPCrckD064HpmntwSxoSBM--30SmCriRBSDCCipC1p3RObsX-aPJFSoefFcz-YNrgveMgMfV2_cWJ_3v_YKHAUGJaVXtZlUUdHs7myFU4u4vDEG0N7IWoxzoMB3Z2dZeoj_emfApCEK_Jd3eeil1NqwrdfwaVSS60N_aN-wnqQ3yb6a53NJa7-Ymw9mMx7hg3Bdc5GJ7wpgENaKJEW4A2uSK5qqvG4w78nt6CVnDiayg5an2TBHsDKf1upc2gsVdQw6PVfYxO9D85nxKUmzXalWEDHPqjIrqy_HCI4uBbXnJcXOdTrI2dRv0dukUab1k7nw7fmvpjgL-2M9wz3Xmv1WH-zdsfsvNUGYRX9cgnEkLjnz35NRJBr7JIkLZswkPL5eJoL99IrI3lg3lGxMKJSIqsfj8DEXZzariOKjW4MiOLA_GleV1UzXWpuGhVpFoiEgX3PVx5w5pfINkYaSF7Zq8-XB5-17sAmvvWxS1)
 
-**ID**:UC10<br>
+**ID**:UC15<br>
 **Назва**: Змінити дані проекту<br>
 **Учасники**: Teamlead, Система<br>
 **Передумови**: Відсутні<br>
@@ -59,4 +59,4 @@ EX2.3 ключ не дійсний*<br>
       
 ***Основний сценарій***:<br>
 
-![](http://www.plantuml.com/plantuml/png/bLD5sbin3Dm7xk0lst9tvUxBS80_pFowAZCpCrt0UM5ohp2-KKT1ltB3acSapSWvsFJY3UzCkHGDAJxEdKx7owLqF7MEyU8nGwp3zQ_T2Y-XxNKOT32mL-mznHz6uHkwzXAw6DiN6DchJ30qw3AumfI_9r3Z0rfaNsAbPmfJeWnQzZfn7KO330Fq8FKzILT8lepHd3uYnR2_T8rnkWdBi8Y0P3QDgNqH-qFx1MIpihT5I8jXRtxITsljNbVOmfpcgG_j9cK8pkMcEkZoFIPwYAapmy9vV1Q2lKBK17hXVs3I9-A9c04Dd-O-bBby9cUg5N_qPKuDQNq51fCrdJIIcVLbD-XGLfUigNteI5le9_kwEzylRyOVzn335sYCnEd_KhXOc7tWx29uUwx-ns1DhreBm1lvRCvJcMhLIpUYeMZeUADQI2Uzvk5u8XgYY2_uYgyAR_0HDyJEoLRSs8hFuZ2ClSJPxyalj668VuC1JtorHUtSldDxD9Ikf9pQ1ndoR_KT)
+![](http://www.plantuml.com/plantuml/png/hLH5kjjW3Dm7xl1_Rrlkhjnz6Gxmc35nLsLcPgO3X3dvVONHZJgM0uxRlg3PrdX66ia-ddIc4iwbjTLun72vSd5kQcrrRchsYjxheeZERUVgeC5xfEKkBF8eoorvOdXX3LmKv0OAgCaxLEKs7_3Mya6Le7V87WgpNS5F4joKMyJKaLRnaD9Nf96NcoYZHiqtXfUkzmuigZq5GdM5gByXGwORIei6MImoSfSyUTwLKUcY7oRtLyfL9KaPMPLH2Ihs4EYTEssXClLHzOchfBHmrVS9zgTEROfu8AyxL9HttNxTdXXFJOgtSaC5FNcKL55hhAEyi_E-F8GrV6PHP3HDP33FWntWBY_CA1M23wtV--2ZF0hSEHkee36OXwzyDhdjzzyYA-_QNXtQpcvrEEqNxX4WwyS31QcvWneR77HIfJN1MyRtobN0BMJrAylJmW833NdUeM59QMq4ImWxsZFZ89Rrgdw-VqT7isaWgvhJBSye4Phjy2VLJ-99PsEJqCJImg9ZvZSsdBb4F1AFd4riBC_DECcJKzFn24lxXT_uRV09tt7FKB--6_TsuoUlgZh-D-M9TuKSBF6VK6OaQtQP_Nltxur7vjPd0zp7USkVxny0)

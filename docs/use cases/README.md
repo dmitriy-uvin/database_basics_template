@@ -144,8 +144,6 @@ EX2.3 ключ не дійсний*<br>
 
 ![UC_AR_3](http://www.plantuml.com/plantuml/png/ZLD55Y9H3DptAVAOBSvgt2ymct5tmrcDkxkx7G1tQAvG_qPJFutxnv8VgQAITdPaiYVJsTpLAuxZ2CzrV8LhRgDXxfYxvXvAA9X7rndoZcOFlKs27upVjTbeqNelwA8WjBjmqKFBt3iI5xQhee82obv31hlcbJ3_DckhvZwlMXPjSv_27m-ULHqKhe_3_OBB3bKjLBWEN6tTDi_PjYf7uYYPZnu1OQHDe0NuP3PD0ONDGxHrv22ZjuAwnIT4pO9guaTH5XMnsg1dxX5i5ck2c7a_u5wXS6xVwhAy8rINL_nsKUIditd912R45nz-iiJw9QOmpRTQuq-ieCB4BtiDw-ZG8PM58xCddiYUbVJ5ynUoik7SkPCymz2MKzi4tqcYHfqQfE9EXFOUEBvpt_5OC3AyFHi_e_sMZdwa4YMn0nZEbOhVvlWfwXsQ7yrZHgeBrc3pUckVI6vsrFN-uRa4sQM7SRn6LvVmeuxYaSwjgHILBqD1Ju4AEN1N6R9qp4EbHEPsQL0AZZh-m5_ympyXiLzuA8nsWdWOn1_TRhObq-VMGdbCJcOtRAD0D1mDEtqf1soT7NJqKVyF)
 
-
-
 ***ID:*** UC_AR_4<br>
 ***Назва:*** Редагування артефакту<br>
 ***Учасники:*** Користувач, Система<br>
@@ -156,3 +154,15 @@ EX2.3 ключ не дійсний*<br>
 ***Основний сценарій***<br>
 
 ![UC_AR_4](http://www.plantuml.com/plantuml/png/dLH5TXnH3DptAVGcst2o2VC5iWapazchC3CpqmLcffclKBgHwwlDR0z-ITMbga_Upi6XKmD3mzUkUfudVDt0DrHw1udUrNjw7rsqzV4DbfgNeSUZpOAVhDzpQ6GSVH2KQ0iwo54XEzeZJDuX8DG7Q2Dpb5j6-_or7YoXGFl6PCxVgDWtj0UDis0YuFEvlY1_A4TxqDLFo1XKWbWuBjd0wIQNFj9F-a5VoIpjqTuotcanVkTos79fn1mJpY81elSvR1DN8d7OrjATyk7QMZMJHyQxzF9m6ZNjTWKrLLS8noTrUMPi3b6JvVvifbfKOOO9wf2vRV22O6GpM-cdXIr_HiSCVuBVA8X9zyaPcrYPdjwXSp9mwSB58Lbn_lmfliPBMqzl5_oWXWWv4hQjffJs7JonQ_-9ZQlNZMVFzPmrldatMEqIL14uSoGEgQVKrpJVJBEj18UVz8bjGFvCJ5Jee5iMTtfw-xPu5ZRkplTIsS1u7M-CEDTFjaYFRRbJasTQMLhTk0yGkjFGo0lr4K9BbUpApR5wWl4d_k4__Wk5_SOZORLOZKUhyPSZMq4gVU56y2Ucqg4JHxHg_ThrQxsnQHnLw-raO3V62000)
+
+
+**ID:*** UC_AR_5<br>
+***Назва:*** Прикріплення артефакту до задачу<br>
+***Учасники:*** Користувач, Система<br>
+***Передумови:*** Існуючий артефакт, задача<br>
+***Результат:*** Прикріплений до задачі артефакт<br>
+***Виключні ситуації:***<br>
+- EX_AR_5.1 Недостатьно прав доступу<br>
+***Основний сценарій***<br>
+
+![UC_AR_5](http://www.plantuml.com/plantuml/png/dLH3cfrH49ttAkfxcSQsiu5COblj7iMsRItWyRUsS6f7ERTkskuxkQYgeuVj0uCd-WU7hbpk4gvh-89IRo7Mstf7xwA5XZwynf9VrZjosoZupleTrusKftU20Wr14nbAf8UxXO-ts13eFJIGEiXD_tb-6mTBoD6uDXRp9qho1ZPec3aVEfpFz1dn0pdSZPP-86E1KX09pmK9d6vYwGFzeE_qXKn1ZyQc4QQv-9tEOGq_tH0XRv6yOfajWexf8LNBz1QKzR8sVyFagepHPwXtEVT1xtleZbCegCXV8XZ9T65UB49KHBbBJooJed1Ztb6DxEQNJKqYDwmzf-LaZ1ZzCBl5ZsYQmGzeU-R8O0h4enz8Ty_W6Uc_SExye2mwU_O4rqXfyycjWc_a3f4XfhDoN6dF_cCxzXvRitJ5oEkPxjE6DrFCzCq7gkWuKmGE_2T6qpvUIvx73_g8bS2Y60aeSAsRvlQZwUdTr6LNx-vi3vNrZzJnoe0pyZ1pGZCL92RFjBAqrBll863RCoylq0S8xAaWwmUqbeuYViSV_CLVeR2VU22ivalnO2b-yvGQx6rzvaveZqR9Rj8JQCdAvIkNyzLY75QxdMV-I_m3)

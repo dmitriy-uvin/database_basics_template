@@ -4,7 +4,6 @@
   }    
   entity Task {
     name: VARCHAR,
-    status: VARCHAR,
     description: VARCHAR,
     deadline: DATETIME
   }
@@ -12,36 +11,50 @@
     name: VARCHAR,
     email: VARCHAR,
     nickname: VARCHAR,
-    password: VARCHAR
+    password: VARCHAR,
+    avatar: VARCHAR
   }
   entity Project {
     name: VARCHAR,
+    icon: VARCHAR,
+    repository: VARCHAR,
+    site_url: VARCHAR,
     description: VARCHAR,
-    deadline: DATETIME,
-    author: USER
+    deadline: DATETIME
   }
   entity Artifact {
     name: VARCHAR,
     description: VARCHAR,
     type: VARCHAR,
+    url: VARCHAR
   }
-  entity TaskUserRelation {
+  entity Action {
     task: TASK,
-    user: User
+    user: User,
+    date: DATE
   }
+  
+  entity State {
+    name: VARCHAR
+  } 
+  
   entity ArtifactTaskRelation {
     task: TASK,
-    artifact: ARTIFACT
+    artifact: ARTIFACT,
+    role: VARCHAR
   }
   
-  User "0, *" -d- "1, 1" TaskUserRelation
-  Task "0, *" -r- "1, 1" TaskUserRelation
+  Action "0, *" -d- "0, 1" User
+  Action "0, *" -l- "1, 1" Task
   
-  Artifact "1, 1" -u- "0, *" ArtifactTaskRelation
-  Task "1, 1" -u- "0, *" ArtifactTaskRelation
+  Artifact "1, 1" -- "0, *" ArtifactTaskRelation
+  Task "1, 1" -- "0, *" ArtifactTaskRelation
   
   
-  ArtifactTaskRelation "0, *" -r- "1, 1" Project
   Member "0, *" -l- "1, 1" Project
   Member "0, *" -d- "1, 1" User
+  
+  Action "0, *" -- "1, 1" State 
+  
+  Task "0, *" -u- "1, 1" Project
 @enduml

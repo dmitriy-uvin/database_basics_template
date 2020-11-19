@@ -1,0 +1,74 @@
+@startuml
+    entity Task
+    entity Task.name
+    entity Task.description
+    entity Task.status
+    entity Task.deadline
+    entity Task.author
+    entity Task.assignedTo
+
+    Task.name -r-* Task
+    Task.description -u-* Task
+    Task.status -d-* Task
+    Task.deadline -u-* Task
+    Task.author -d-* Task
+    Task.assignedTo -l-* Task
+    
+    entity Project
+    entity Project.name
+    entity Project.description
+    entity Project.deadline
+    entity Project.author
+    
+    Project.name -u-* Project
+    Project.description -u-* Project
+    Project.author -u-* Project
+    Project.deadline -u-* Project
+    
+    
+    Task "0, *" -r- "1, 1" Project
+    
+    entity User
+    entity User.name
+    entity User.email
+    entity User.nickname
+    entity User.password
+
+    User.name -r-* User
+    User.email -l-* User
+    User.nickname -u-* User
+    User.password -d-* User
+    
+    
+    entity Member
+    object TeamLead #f2f7ff
+    object Developer  #f2f7ff
+    object QA  #f2f7ff
+    object HR  #f2f7ff
+    object ProductManager  #f2f7ff
+    object Other  #f2f7ff
+    
+    Developer ..> Member : instaceOf
+    TeamLead ..> Member : instanceOf
+    QA ..> Member : instanceOf
+    HR ..> Member : instanceOf
+    ProductManager ..> Member : instanceOf
+    Other ..> Member : instanceOf
+    
+    Member "0, *" -d- "1, 1" Project
+    User "0, *" -u- "1, 1" Member
+    
+    entity Artifact
+    entity Artifact.type
+    entity Artifact.name
+    entity Artifact.description
+    entity Artifact.link
+    
+    Artifact.type -d-* Artifact
+    Artifact.name -r-* Artifact
+    Artifact.description -u-* Artifact
+    Artifact.link -u-* Artifact
+    
+    Artifact "0, *" -u- "1, 1" Task
+    
+@enduml

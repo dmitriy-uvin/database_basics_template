@@ -1,0 +1,47 @@
+@startuml
+  entity Member {
+    role: VARCHAR
+  }    
+  entity Task {
+    name: VARCHAR,
+    status: VARCHAR,
+    description: VARCHAR,
+    deadline: DATETIME
+  }
+  entity User {
+    name: VARCHAR,
+    email: VARCHAR,
+    nickname: VARCHAR,
+    password: VARCHAR
+  }
+  entity Project {
+    name: VARCHAR,
+    description: VARCHAR,
+    deadline: DATETIME,
+    author: USER
+  }
+  entity Artifact {
+    name: VARCHAR,
+    description: VARCHAR,
+    type: VARCHAR,
+  }
+  entity TaskUserRelation {
+    task: TASK,
+    user: User
+  }
+  entity ArtifactTaskRelation {
+    task: TASK,
+    artifact: ARTIFACT
+  }
+  
+  User "0, *" -d- "1, 1" TaskUserRelation
+  Task "0, *" -r- "1, 1" TaskUserRelation
+  
+  Artifact "1, 1" -u- "0, *" ArtifactTaskRelation
+  Task "1, 1" -u- "0, *" ArtifactTaskRelation
+  
+  
+  ArtifactTaskRelation "0, *" -r- "1, 1" Project
+  Member "0, *" -l- "1, 1" Project
+  Member "0, *" -d- "1, 1" User
+@enduml

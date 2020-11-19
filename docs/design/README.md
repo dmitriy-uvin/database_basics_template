@@ -1,4 +1,13 @@
 # Проєктування бази даних
 
-*В рамках проекту розробляється модель бізнес-об'єктів, ER-модель та реляційна схема.*
+### Модель бізнес-об'єктів
 
+![ER_1](http://www.plantuml.com/plantuml/png/VPJLijmm38QlI--WIQ_ApCpCxGDuOsNNNKF6TWfFVqXpelL8avi5VR-iNp8yBTNaEWL_vYG00CRgwd_uQSfM12v74r16BPO-kx6w52KirTIfQ4d6UXTH4ZFLJSfAl1ItZcX_fZCdYSwUu5A-T9uz2rjmQPASdC4bAz1iJkInFpMFBS8bt-2cdQyv_SQ-QZ4QiGB4b2KdpohSdIbzxjIZDbjNIjK55Iql1SAS8g5F7Y9qLo_2-UvmIw6xTX6kTKBF_Vqgc4L0p92Y68ppYjZrMprXDANyJTdISGCAyd7ZshmyNFA2K0KQiu1p4JfF39LcFs5O7UEqEfm8_4GJFgAnS7QuFjmPXWQ-n3_equWPLFpjcHv_-rsF7-o2dVhwoKIpngnhljIDGFJ9PYvVVWpK2jm75qirFNuXBVSZHP5LtvujyuCE5ddRoRAMEbgKq2VX-VHQvVJIdhDccZMKhEpvirpTO2XR12_N_oFgX4wq9F8T4GBlOlDeDTNec3QkMC1tGnV8rqJes88G24DoZis3-nIZdOBV1m00)
+
+### ER -  модель
+
+![ER_2](http://www.plantuml.com/plantuml/png/dLArUiCm49vBxt2VjtAxPWepHyckMWOP97_IkPnd3pCdPj_z94Xgf0hZCBYxlhi6i0Ho_86cafvb8loDQm22XbO2UgbsffXgFqrhpDAcuX5oARPRb0LSZ2YaLCjrIAhMd7LeZAvK2_ous1y_Lgm9rVuXNwerTuJ5Y4n0jvDhxrQULJLIZFL5qRCfaXl7VzeLigijTIYa5L8UR1O5D_rTu8Xg_IKLEnnpMxzdAMvpYwLm8os0ae5rS9PJ2hbDbolCH-wbEiaLPXDwzfhZJtHmgKYgKzaLf6Q57vQQ5s7s3yRR4pmOyFmCnliJl1kJ6J-CcEtPAMYyYnQG-3XcssSnHJF80Z6cBVAEdabBi3WCXW00)
+
+### Схема Бази Даних
+
+![DB_SCHEME](https://github.com/dmitriy-uvin/operating_project_system/blob/master/src/images/db_scheme.png)

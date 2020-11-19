@@ -11,3 +11,5 @@
 ### Схема Бази Даних
 
 ![DB_SCHEME](https://github.com/dmitriy-uvin/operating_project_system/blob/master/src/images/db_schema_1.png)
+
+[SQL Scheme](https://github.com/dmitriy-uvin/operating_project_system/blob/master/src/sql/ddl.sql)

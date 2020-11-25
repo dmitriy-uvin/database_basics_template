@@ -1,21 +1,45 @@
 const models = require('./models/models.js');
 
+const userMapper = (user) => {
+    console.log(user.id + ' | ' + user.name + ' | ' + user.email + ' | ' + user.nickname);
+};
+
+const projectMapper = (project) => {
+    console.log('#' + project.id + ' | ' + project.name);
+};
+
+
 (async () => {
-    const users = await models.User.findAll();
-    console.log('\n\n');
-    console.log("Users list:", JSON.stringify(users, null, 4));
+    console.log('--------');
+    console.log('Users list');
+    console.log('--------');
+    const usersList = await models.User.findAll();
+    usersList.map(userMapper);
 
 
-    const projectsList = (await models.Project.findAll());
-    const projectsNames = projectsList.map(project => project.name);
-    console.log('\n\n');
+    console.log('\n--------');
     console.log('Projects List');
-    console.log(projectsNames);
+    console.log('--------');
+    const projectsList = (await models.Project.findAll());
+    projectsList.map(projectMapper);
 
+    console.log('\n');
 
-    const project = (await models.Project.findOne({ where: { id : 1} }));
-    console.log('\n\n');
-    console.log("User for Project: " + project.name);
-    const projectUsers = await project.getUsers();
-    console.log(JSON.stringify(projectUsers, null, 4));
+    console.log('\n--------');
+    console.log('Project - User');
+    console.log('--------');
+    const projects = await models.Project.findAll({
+        include: [{
+            model: models.User,
+            through: {
+                attributes: ['role']
+            }
+        }]
+    });
+    projects.map(project => {
+        console.log(project.name);
+        project.users.map(user => {
+            console.log(user.id + ' | ' + user.name + ' | ' + user.project_user.dataValues.role);
+        });
+    })
 })();

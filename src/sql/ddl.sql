@@ -16,6 +16,23 @@ CREATE SCHEMA IF NOT EXISTS `projects_lab` DEFAULT CHARACTER SET utf8 ;
 USE `projects_lab` ;
 
 -- -----------------------------------------------------
+-- Table `projects_lab`.`projects`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `projects_lab`.`projects` ;
+
+CREATE TABLE IF NOT EXISTS `projects_lab`.`projects` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `site_url` VARCHAR(255) NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `description` VARCHAR(255) NOT NULL,
+  `github_repository` VARCHAR(255) NOT NULL,
+  `createdAt` DATETIME NULL,
+  `updatedAt` DATETIME NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `projects_lab`.`users`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `projects_lab`.`users` ;
@@ -33,30 +50,6 @@ CREATE TABLE IF NOT EXISTS `projects_lab`.`users` (
   PRIMARY KEY (`id`),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
   UNIQUE INDEX `nickname_UNIQUE` (`nickname` ASC) VISIBLE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `projects_lab`.`projects`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `projects_lab`.`projects` ;
-
-CREATE TABLE IF NOT EXISTS `projects_lab`.`projects` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `author_id` INT NOT NULL,
-  `site_url` VARCHAR(255) NULL,
-  `name` VARCHAR(255) NOT NULL,
-  `description` VARCHAR(255) NOT NULL,
-  `github_repository` VARCHAR(255) NOT NULL,
-  `createdAt` DATETIME NULL,
-  `updatedAt` DATETIME NULL,
-  PRIMARY KEY (`id`),
-  INDEX `projects_users_author_id_idx` (`author_id` ASC) VISIBLE,
-  CONSTRAINT `projects_users_author_id`
-    FOREIGN KEY (`author_id`)
-    REFERENCES `projects_lab`.`users` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -180,6 +173,16 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
+-- Data for table `projects_lab`.`projects`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `projects_lab`;
+INSERT INTO `projects_lab`.`projects` (`id`, `site_url`, `name`, `description`, `github_repository`, `createdAt`, `updatedAt`) VALUES (1, 'https://projects-lab.com', 'Projects Lab', 'Система для зручного управління вашим проектом.', 'https://github.com/dmitriy-uvin/operating_project_system', '2020-09-01 11:00:09', '2020-11-19 11:45:56');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
 -- Data for table `projects_lab`.`users`
 -- -----------------------------------------------------
 START TRANSACTION;
@@ -191,17 +194,6 @@ INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, 
 INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `createdAt`, `updatedAt`) VALUES (5, 'Скворцов Павло', 'skvortsovpavel@gmail.com', NULL, 'skvortsovpavel', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
 INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `createdAt`, `updatedAt`) VALUES (6, 'Салун Кирил', 'salun@gmail.com', NULL, 'salun', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
 INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `createdAt`, `updatedAt`) VALUES (7, 'Прилепа Сергій', 'prilepa@gmail.com', NULL, 'prilepa', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
-
-COMMIT;
-
-
--- -----------------------------------------------------
--- Data for table `projects_lab`.`projects`
--- -----------------------------------------------------
-START TRANSACTION;
-USE `projects_lab`;
-INSERT INTO `projects_lab`.`projects` (`id`, `author_id`, `site_url`, `name`, `description`, `github_repository`, `createdAt`, `updatedAt`) VALUES (1, 1, 'https://projects-lab.com', 'Projects Lab', 'Система для зручного управління вашим проектом.', 'https://github.com/dmitriy-uvin/operating_project_system', '2020-09-01 11:00:09', '2020-11-19 11:45:56');
-INSERT INTO `projects_lab`.`projects` (`id`, `author_id`, `site_url`, `name`, `description`, `github_repository`, `createdAt`, `updatedAt`) VALUES (2, 1, 'https://google.com', 'Google', 'Пошукова система.', 'https://github.com/google/search', '2020-09-01 11:00:09', '2020-11-19 11:45:56');
 
 COMMIT;
 

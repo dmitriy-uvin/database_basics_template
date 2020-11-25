@@ -25,5 +25,5 @@ User.init(
 );
 
 module.exports = {
-    User: User
+    User
 };

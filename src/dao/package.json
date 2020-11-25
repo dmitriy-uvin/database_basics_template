@@ -1,0 +1,12 @@
+{
+    "name": "database-connection",
+    "version": "1.0.0",
+    "description": "Connect to database by Node.js",
+    "dependencies": {
+        "mysql2": "^2.2.5",
+        "sequelize": "^6.3.5"
+    },
+    "devDependencies": {},
+    "author": "Dmitriy Uvin",
+    "license": "ISC"
+}

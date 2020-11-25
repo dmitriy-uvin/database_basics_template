@@ -23,9 +23,7 @@ const projectMapper = (project) => {
     const projectsList = (await models.Project.findAll());
     projectsList.map(projectMapper);
 
-    console.log('\n');
-
-    console.log('\n--------');
+    console.log('\n\n--------');
     console.log('Project - User');
     console.log('--------');
     const projects = await models.Project.findAll({
@@ -37,7 +35,7 @@ const projectMapper = (project) => {
         }]
     });
     projects.map(project => {
-        console.log(project.name);
+        console.log('#' + project.id + ' | ' + project.name);
         project.users.map(user => {
             console.log(user.id + ' | ' + user.name + ' | ' + user.project_user.dataValues.role);
         });

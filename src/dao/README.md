@@ -1,11 +1,11 @@
-Installing
+### Installing
 
-With package.json
+##### With package.json
 ```
 npm install
 ```
 
-Without package.json
+##### Without package.json
 ```
 npm install mysql2
 npm install sequelize

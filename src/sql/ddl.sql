@@ -28,8 +28,8 @@ CREATE TABLE IF NOT EXISTS `projects_lab`.`users` (
   `nickname` VARCHAR(255) NOT NULL,
   `password` VARCHAR(255) NOT NULL,
   `avatar` VARCHAR(255) NULL,
-  `created_at` DATETIME NULL,
-  `updated_at` DATETIME NULL,
+  `createdAt` DATETIME NULL,
+  `updatedAt` DATETIME NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
   UNIQUE INDEX `nickname_UNIQUE` (`nickname` ASC) VISIBLE)
@@ -48,8 +48,8 @@ CREATE TABLE IF NOT EXISTS `projects_lab`.`projects` (
   `name` VARCHAR(255) NOT NULL,
   `description` VARCHAR(255) NOT NULL,
   `github_repository` VARCHAR(255) NOT NULL,
-  `created_at` DATETIME NULL,
-  `updated_at` DATETIME NULL,
+  `createdAt` DATETIME NULL,
+  `updatedAt` DATETIME NULL,
   PRIMARY KEY (`id`),
   INDEX `projects_users_author_id_idx` (`author_id` ASC) VISIBLE,
   CONSTRAINT `projects_users_author_id`
@@ -72,8 +72,8 @@ CREATE TABLE IF NOT EXISTS `projects_lab`.`tasks` (
   `description` VARCHAR(255) NULL,
   `status` VARCHAR(255) NOT NULL,
   `deadline` DATETIME NOT NULL,
-  `created_at` DATETIME NULL,
-  `updated_at` DATETIME NULL,
+  `createdAt` DATETIME NULL,
+  `updatedAt` DATETIME NULL,
   PRIMARY KEY (`id`),
   INDEX `tasks_project_id_projects_idx` (`project_id` ASC) VISIBLE,
   CONSTRAINT `tasks_project_id_projects`
@@ -184,13 +184,13 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `projects_lab`;
-INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `created_at`, `updated_at`) VALUES (1, 'Увін Дмитро', 'uvindmytro@gmail.com', NULL, 'dmitriyuvin', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
-INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `created_at`, `updated_at`) VALUES (2, 'Накарловіч Ростислав', 'nakarlovichrostislav@gmail.com', NULL, 'nakarlovichrostislav', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
-INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `created_at`, `updated_at`) VALUES (3, 'Сударєв Артем', 'sudarevartem@gmail.com', NULL, 'sudarevartem', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
-INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `created_at`, `updated_at`) VALUES (4, 'Писарчук Ілля', 'pisarchyk@gmail.com', NULL, 'pisarchyk', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
-INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `created_at`, `updated_at`) VALUES (5, 'Скворцов Павло', 'skvortsovpavel@gmail.com', NULL, 'skvortsovpavel', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
-INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `created_at`, `updated_at`) VALUES (6, 'Салун Кирил', 'salun@gmail.com', NULL, 'salun', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
-INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `created_at`, `updated_at`) VALUES (7, 'Прилепа Сергій', 'prilepa@gmail.com', NULL, 'prilepa', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
+INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `createdAt`, `updatedAt`) VALUES (1, 'Увін Дмитро', 'uvindmytro@gmail.com', NULL, 'dmitriyuvin', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
+INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `createdAt`, `updatedAt`) VALUES (2, 'Накарловіч Ростислав', 'nakarlovichrostislav@gmail.com', NULL, 'nakarlovichrostislav', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
+INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `createdAt`, `updatedAt`) VALUES (3, 'Сударєв Артем', 'sudarevartem@gmail.com', NULL, 'sudarevartem', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
+INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `createdAt`, `updatedAt`) VALUES (4, 'Писарчук Ілля', 'pisarchyk@gmail.com', NULL, 'pisarchyk', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
+INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `createdAt`, `updatedAt`) VALUES (5, 'Скворцов Павло', 'skvortsovpavel@gmail.com', NULL, 'skvortsovpavel', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
+INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `createdAt`, `updatedAt`) VALUES (6, 'Салун Кирил', 'salun@gmail.com', NULL, 'salun', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
+INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `createdAt`, `updatedAt`) VALUES (7, 'Прилепа Сергій', 'prilepa@gmail.com', NULL, 'prilepa', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
 
 COMMIT;
 
@@ -200,7 +200,8 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `projects_lab`;
-INSERT INTO `projects_lab`.`projects` (`id`, `author_id`, `site_url`, `name`, `description`, `github_repository`, `created_at`, `updated_at`) VALUES (1, 1, 'https://projects-lab.com', 'Projects Lab', 'Система для зручного управління вашим проектом.', 'https://github.com/dmitriy-uvin/operating_project_system', '2020-09-01 11:00:09', '2020-11-19 11:45:56');
+INSERT INTO `projects_lab`.`projects` (`id`, `author_id`, `site_url`, `name`, `description`, `github_repository`, `createdAt`, `updatedAt`) VALUES (1, 1, 'https://projects-lab.com', 'Projects Lab', 'Система для зручного управління вашим проектом.', 'https://github.com/dmitriy-uvin/operating_project_system', '2020-09-01 11:00:09', '2020-11-19 11:45:56');
+INSERT INTO `projects_lab`.`projects` (`id`, `author_id`, `site_url`, `name`, `description`, `github_repository`, `createdAt`, `updatedAt`) VALUES (2, 1, 'https://google.com', 'Google', 'Пошукова система.', 'https://github.com/google/search', '2020-09-01 11:00:09', '2020-11-19 11:45:56');
 
 COMMIT;
 
@@ -210,9 +211,9 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `projects_lab`;
-INSERT INTO `projects_lab`.`tasks` (`id`, `project_id`, `name`, `description`, `status`, `deadline`, `created_at`, `updated_at`) VALUES (1, 1, 'Створити базу даних', 'Створення бази даних з допомогою MySQL Server & Workbench', 'done', '2020-11-20 10:00:00', '2020-11-17 10:00:00', '2020-11-19 20:00:00');
-INSERT INTO `projects_lab`.`tasks` (`id`, `project_id`, `name`, `description`, `status`, `deadline`, `created_at`, `updated_at`) VALUES (2, 1, 'Створити ER model', 'Створення діаграми для ER моделі', 'done', '2020-11-20 10:00:00', '2020-11-17 10:00:00', '2020-11-19 20:00:00');
-INSERT INTO `projects_lab`.`tasks` (`id`, `project_id`, `name`, `description`, `status`, `deadline`, `created_at`, `updated_at`) VALUES (3, 1, 'Створити Use Cases', 'Створення Use Cases для повного функціоналу системи', 'done', '2020-11-20 10:00:00', '2020-11-17 10:00:00', '2020-11-19 20:00:00');
+INSERT INTO `projects_lab`.`tasks` (`id`, `project_id`, `name`, `description`, `status`, `deadline`, `createdAt`, `updatedAt`) VALUES (1, 1, 'Створити базу даних', 'Створення бази даних з допомогою MySQL Server & Workbench', 'done', '2020-11-20 10:00:00', '2020-11-17 10:00:00', '2020-11-19 20:00:00');
+INSERT INTO `projects_lab`.`tasks` (`id`, `project_id`, `name`, `description`, `status`, `deadline`, `createdAt`, `updatedAt`) VALUES (2, 1, 'Створити ER model', 'Створення діаграми для ER моделі', 'done', '2020-11-20 10:00:00', '2020-11-17 10:00:00', '2020-11-19 20:00:00');
+INSERT INTO `projects_lab`.`tasks` (`id`, `project_id`, `name`, `description`, `status`, `deadline`, `createdAt`, `updatedAt`) VALUES (3, 1, 'Створити Use Cases', 'Створення Use Cases для повного функціоналу системи', 'done', '2020-11-20 10:00:00', '2020-11-17 10:00:00', '2020-11-19 20:00:00');
 
 COMMIT;
 

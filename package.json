@@ -1,0 +1,29 @@
+{
+  "name": "operating_project_system",
+  "version": "1.0.0",
+  "description": "Система управління проектами (СУП). За домогою цієї системи ви зможете зручно керувати своїми проектами та їх розробкою.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "node ./test"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cli-table3": "^0.6.0",
+    "lodash-node": "^3.10.2",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitriy-uvin/operating_project_system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitriy-uvin/operating_project_system/issues"
+  },
+  "homepage": "https://github.com/dmitriy-uvin/operating_project_system#readme"
+}

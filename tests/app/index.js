@@ -42,11 +42,6 @@ const toTable =  (data, ...fields) => {
     // console.log(projects.map( project => `${project.name} (#${project.id})
 // ${project.users.map(user => userMapper(user.id, user.name, user.project_user.dataValues.role)).join("\n")}
 // `).join("\n"))
-    console.log(projectTeams.map(
-        project => `Project: ${project.name} (#${project.id})
-    ${toTable(
-    project.users,"id","name", "project_user.dataValues.role"
-        )}
-`).join("\n")
-    );
+    console.log(projectTeams.map(project => `Project: ${project.name} (#${project.id})
+${toTable(project.users,"id","name", "project_user.dataValues.role")}`).join("\n"));
 })();

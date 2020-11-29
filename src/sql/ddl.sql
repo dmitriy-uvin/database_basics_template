@@ -21,15 +21,15 @@ USE `projects_lab` ;
 DROP TABLE IF EXISTS `projects_lab`.`projects` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`projects` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `site_url` VARCHAR(255) NULL,
-  `name` VARCHAR(255) NOT NULL,
-  `description` VARCHAR(255) NOT NULL,
-  `github_repository` VARCHAR(255) NOT NULL,
-  `createdAt` DATETIME NULL,
-  `updatedAt` DATETIME NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+                                                         `id` INT NOT NULL AUTO_INCREMENT,
+                                                         `site_url` VARCHAR(255) NULL,
+                                                         `name` VARCHAR(255) NOT NULL,
+                                                         `description` VARCHAR(255) NOT NULL,
+                                                         `github_repository` VARCHAR(255) NOT NULL,
+                                                         `createdAt` DATETIME NULL,
+                                                         `updatedAt` DATETIME NULL,
+                                                         PRIMARY KEY (`id`))
+    ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -38,19 +38,19 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `projects_lab`.`users` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`users` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(255) NOT NULL,
-  `email` VARCHAR(255) NOT NULL,
-  `email_verified_at` VARCHAR(255) NULL,
-  `nickname` VARCHAR(255) NOT NULL,
-  `password` VARCHAR(255) NOT NULL,
-  `avatar` VARCHAR(255) NULL,
-  `createdAt` DATETIME NULL,
-  `updatedAt` DATETIME NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
-  UNIQUE INDEX `nickname_UNIQUE` (`nickname` ASC) VISIBLE)
-ENGINE = InnoDB;
+                                                      `id` INT NOT NULL AUTO_INCREMENT,
+                                                      `name` VARCHAR(255) NOT NULL,
+                                                      `email` VARCHAR(255) NOT NULL,
+                                                      `email_verified_at` VARCHAR(255) NULL,
+                                                      `nickname` VARCHAR(255) NOT NULL,
+                                                      `password` VARCHAR(255) NOT NULL,
+                                                      `avatar` VARCHAR(255) NULL,
+                                                      `createdAt` DATETIME NULL,
+                                                      `updatedAt` DATETIME NULL,
+                                                      PRIMARY KEY (`id`),
+                                                      UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
+                                                      UNIQUE INDEX `nickname_UNIQUE` (`nickname` ASC) VISIBLE)
+    ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -59,22 +59,22 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `projects_lab`.`tasks` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`tasks` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `project_id` INT NOT NULL,
-  `name` VARCHAR(255) NOT NULL,
-  `description` VARCHAR(255) NULL,
-  `status` VARCHAR(255) NOT NULL,
-  `deadline` DATETIME NOT NULL,
-  `createdAt` DATETIME NULL,
-  `updatedAt` DATETIME NULL,
-  PRIMARY KEY (`id`),
-  INDEX `tasks_project_id_projects_idx` (`project_id` ASC) VISIBLE,
-  CONSTRAINT `tasks_project_id_projects`
-    FOREIGN KEY (`project_id`)
-    REFERENCES `projects_lab`.`projects` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+                                                      `id` INT NOT NULL AUTO_INCREMENT,
+                                                      `project_id` INT NOT NULL,
+                                                      `name` VARCHAR(255) NOT NULL,
+                                                      `description` VARCHAR(255) NULL,
+                                                      `status` VARCHAR(255) NOT NULL,
+                                                      `deadline` DATETIME NOT NULL,
+                                                      `createdAt` DATETIME NULL,
+                                                      `updatedAt` DATETIME NULL,
+                                                      PRIMARY KEY (`id`),
+                                                      INDEX `tasks_project_id_projects_idx` (`project_id` ASC) VISIBLE,
+                                                      CONSTRAINT `tasks_project_id_projects`
+                                                          FOREIGN KEY (`project_id`)
+                                                              REFERENCES `projects_lab`.`projects` (`id`)
+                                                              ON DELETE NO ACTION
+                                                              ON UPDATE NO ACTION)
+    ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -83,24 +83,24 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `projects_lab`.`project_user` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`project_user` (
-  `id` INT NOT NULL,
-  `project_id` INT NOT NULL,
-  `user_id` INT NOT NULL,
-  `role` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `project_user_project_id_idx` (`project_id` ASC) VISIBLE,
-  INDEX `project_user_user_id_idx` (`user_id` ASC) VISIBLE,
-  CONSTRAINT `project_user_project_id`
-    FOREIGN KEY (`project_id`)
-    REFERENCES `projects_lab`.`projects` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `project_user_user_id`
-    FOREIGN KEY (`user_id`)
-    REFERENCES `projects_lab`.`users` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+                                                             `id` INT NOT NULL,
+                                                             `project_id` INT NOT NULL,
+                                                             `user_id` INT NOT NULL,
+                                                             `role` VARCHAR(255) NOT NULL,
+                                                             PRIMARY KEY (`id`),
+                                                             INDEX `project_user_project_id_idx` (`project_id` ASC) VISIBLE,
+                                                             INDEX `project_user_user_id_idx` (`user_id` ASC) VISIBLE,
+                                                             CONSTRAINT `project_user_project_id`
+                                                                 FOREIGN KEY (`project_id`)
+                                                                     REFERENCES `projects_lab`.`projects` (`id`)
+                                                                     ON DELETE NO ACTION
+                                                                     ON UPDATE NO ACTION,
+                                                             CONSTRAINT `project_user_user_id`
+                                                                 FOREIGN KEY (`user_id`)
+                                                                     REFERENCES `projects_lab`.`users` (`id`)
+                                                                     ON DELETE NO ACTION
+                                                                     ON UPDATE NO ACTION)
+    ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -109,23 +109,23 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `projects_lab`.`task_user` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`task_user` (
-  `id` INT NOT NULL,
-  `task_id` INT NOT NULL,
-  `user_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `task_user_task_id_idx` (`task_id` ASC) VISIBLE,
-  INDEX `task_user_user_id_idx` (`user_id` ASC) VISIBLE,
-  CONSTRAINT `task_user_task_id`
-    FOREIGN KEY (`task_id`)
-    REFERENCES `projects_lab`.`tasks` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `task_user_user_id`
-    FOREIGN KEY (`user_id`)
-    REFERENCES `projects_lab`.`users` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+                                                          `id` INT NOT NULL,
+                                                          `task_id` INT NOT NULL,
+                                                          `user_id` INT NOT NULL,
+                                                          PRIMARY KEY (`id`),
+                                                          INDEX `task_user_task_id_idx` (`task_id` ASC) VISIBLE,
+                                                          INDEX `task_user_user_id_idx` (`user_id` ASC) VISIBLE,
+                                                          CONSTRAINT `task_user_task_id`
+                                                              FOREIGN KEY (`task_id`)
+                                                                  REFERENCES `projects_lab`.`tasks` (`id`)
+                                                                  ON DELETE NO ACTION
+                                                                  ON UPDATE NO ACTION,
+                                                          CONSTRAINT `task_user_user_id`
+                                                              FOREIGN KEY (`user_id`)
+                                                                  REFERENCES `projects_lab`.`users` (`id`)
+                                                                  ON DELETE NO ACTION
+                                                                  ON UPDATE NO ACTION)
+    ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -134,13 +134,13 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `projects_lab`.`artifacts` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`artifacts` (
-  `id` INT NOT NULL,
-  `name` VARCHAR(255) NOT NULL,
-  `type` VARCHAR(255) NOT NULL,
-  `description` VARCHAR(255) NOT NULL,
-  `link` VARCHAR(255) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
+                                                          `id` INT NOT NULL,
+                                                          `name` VARCHAR(255) NOT NULL,
+                                                          `type` VARCHAR(255) NOT NULL,
+                                                          `description` VARCHAR(255) NOT NULL,
+                                                          `link` VARCHAR(255) NULL,
+                                                          PRIMARY KEY (`id`))
+    ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -149,23 +149,23 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `projects_lab`.`artifact_task` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`artifact_task` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `artefact_id` INT NOT NULL,
-  `task_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `artefact_task_artfact_id_idx` (`artefact_id` ASC) VISIBLE,
-  INDEX `artefact_task_task_id_idx` (`task_id` ASC) VISIBLE,
-  CONSTRAINT `artefact_task_artfact_id`
-    FOREIGN KEY (`artefact_id`)
-    REFERENCES `projects_lab`.`artifacts` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `artefact_task_task_id`
-    FOREIGN KEY (`task_id`)
-    REFERENCES `projects_lab`.`tasks` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+                                                              `id` INT NOT NULL AUTO_INCREMENT,
+                                                              `artefact_id` INT NOT NULL,
+                                                              `task_id` INT NOT NULL,
+                                                              PRIMARY KEY (`id`),
+                                                              INDEX `artefact_task_artfact_id_idx` (`artefact_id` ASC) VISIBLE,
+                                                              INDEX `artefact_task_task_id_idx` (`task_id` ASC) VISIBLE,
+                                                              CONSTRAINT `artefact_task_artfact_id`
+                                                                  FOREIGN KEY (`artefact_id`)
+                                                                      REFERENCES `projects_lab`.`artifacts` (`id`)
+                                                                      ON DELETE NO ACTION
+                                                                      ON UPDATE NO ACTION,
+                                                              CONSTRAINT `artefact_task_task_id`
+                                                                  FOREIGN KEY (`task_id`)
+                                                                      REFERENCES `projects_lab`.`tasks` (`id`)
+                                                                      ON DELETE NO ACTION
+                                                                      ON UPDATE NO ACTION)
+    ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
@@ -178,6 +178,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 START TRANSACTION;
 USE `projects_lab`;
 INSERT INTO `projects_lab`.`projects` (`id`, `site_url`, `name`, `description`, `github_repository`, `createdAt`, `updatedAt`) VALUES (1, 'https://projects-lab.com', 'Projects Lab', 'Система для зручного управління вашим проектом.', 'https://github.com/dmitriy-uvin/operating_project_system', '2020-09-01 11:00:09', '2020-11-19 11:45:56');
+INSERT INTO `projects_lab`.`projects` (`id`, `site_url`, `name`, `description`, `github_repository`, `createdAt`, `updatedAt`) VALUES (2, 'https://google.com', 'Google Search', 'Пошукова система', 'https://github.com/google/search', '2020-09-01 11:00:09', '2020-11-19 11:45:56');
 
 COMMIT;
 
@@ -222,6 +223,9 @@ INSERT INTO `projects_lab`.`project_user` (`id`, `project_id`, `user_id`, `role`
 INSERT INTO `projects_lab`.`project_user` (`id`, `project_id`, `user_id`, `role`) VALUES (5, 1, 5, 'Developer');
 INSERT INTO `projects_lab`.`project_user` (`id`, `project_id`, `user_id`, `role`) VALUES (6, 1, 6, 'Developer');
 INSERT INTO `projects_lab`.`project_user` (`id`, `project_id`, `user_id`, `role`) VALUES (7, 1, 7, 'Developer');
+INSERT INTO `projects_lab`.`project_user` (`id`, `project_id`, `user_id`, `role`) VALUES (8, 2, 1, 'TeamLead');
+INSERT INTO `projects_lab`.`project_user` (`id`, `project_id`, `user_id`, `role`) VALUES (9, 2, 2, 'Developer');
+INSERT INTO `projects_lab`.`project_user` (`id`, `project_id`, `user_id`, `role`) VALUES (10, 2, 3, 'Developer');
 
 COMMIT;
 

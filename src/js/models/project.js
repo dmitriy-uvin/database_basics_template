@@ -1,4 +1,4 @@
-const connection = require('../config/connection.js');
+const connection = require('../connection');
 const Sequilize = require('sequelize');
 
 const Model = Sequilize.Model;
@@ -29,11 +29,11 @@ Project.init(
         }
     },
     {
-        sequelize: connection.database,
+        sequelize: connection,
         modelName: 'project'
     }
 );
 
 module.exports = {
-    Project: Project
+    Project
 };

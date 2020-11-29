@@ -1,4 +1,4 @@
-const models = require('./models/models.js');
+const models = require('./models');
 
 const userMapper = (user) => {
     console.log(user.id + ' | ' + user.name + ' | ' + user.email + ' | ' + user.nickname);

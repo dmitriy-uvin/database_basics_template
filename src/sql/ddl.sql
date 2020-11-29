@@ -1,23 +1,12 @@
--- MySQL Workbench Forward Engineering
-
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
--- -----------------------------------------------------
--- Schema projects_lab
--- -----------------------------------------------------
 DROP SCHEMA IF EXISTS `projects_lab` ;
 
--- -----------------------------------------------------
--- Schema projects_lab
--- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `projects_lab` DEFAULT CHARACTER SET utf8 ;
 USE `projects_lab` ;
 
--- -----------------------------------------------------
--- Table `projects_lab`.`projects`
--- -----------------------------------------------------
 DROP TABLE IF EXISTS `projects_lab`.`projects` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`projects` (
@@ -32,9 +21,6 @@ CREATE TABLE IF NOT EXISTS `projects_lab`.`projects` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `projects_lab`.`users`
--- -----------------------------------------------------
 DROP TABLE IF EXISTS `projects_lab`.`users` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`users` (
@@ -53,9 +39,6 @@ CREATE TABLE IF NOT EXISTS `projects_lab`.`users` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `projects_lab`.`tasks`
--- -----------------------------------------------------
 DROP TABLE IF EXISTS `projects_lab`.`tasks` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`tasks` (
@@ -77,9 +60,6 @@ CREATE TABLE IF NOT EXISTS `projects_lab`.`tasks` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `projects_lab`.`project_user`
--- -----------------------------------------------------
 DROP TABLE IF EXISTS `projects_lab`.`project_user` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`project_user` (
@@ -103,9 +83,6 @@ CREATE TABLE IF NOT EXISTS `projects_lab`.`project_user` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `projects_lab`.`task_user`
--- -----------------------------------------------------
 DROP TABLE IF EXISTS `projects_lab`.`task_user` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`task_user` (
@@ -128,9 +105,6 @@ CREATE TABLE IF NOT EXISTS `projects_lab`.`task_user` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `projects_lab`.`artifacts`
--- -----------------------------------------------------
 DROP TABLE IF EXISTS `projects_lab`.`artifacts` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`artifacts` (
@@ -143,9 +117,6 @@ CREATE TABLE IF NOT EXISTS `projects_lab`.`artifacts` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `projects_lab`.`artifact_task`
--- -----------------------------------------------------
 DROP TABLE IF EXISTS `projects_lab`.`artifact_task` ;
 
 CREATE TABLE IF NOT EXISTS `projects_lab`.`artifact_task` (
@@ -172,9 +143,7 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
--- -----------------------------------------------------
--- Data for table `projects_lab`.`projects`
--- -----------------------------------------------------
+
 START TRANSACTION;
 USE `projects_lab`;
 INSERT INTO `projects_lab`.`projects` (`id`, `site_url`, `name`, `description`, `github_repository`, `createdAt`, `updatedAt`) VALUES (1, 'https://projects-lab.com', 'Projects Lab', 'Система для зручного управління вашим проектом.', 'https://github.com/dmitriy-uvin/operating_project_system', '2020-09-01 11:00:09', '2020-11-19 11:45:56');
@@ -182,9 +151,6 @@ INSERT INTO `projects_lab`.`projects` (`id`, `site_url`, `name`, `description`, 
 COMMIT;
 
 
--- -----------------------------------------------------
--- Data for table `projects_lab`.`users`
--- -----------------------------------------------------
 START TRANSACTION;
 USE `projects_lab`;
 INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, `nickname`, `password`, `avatar`, `createdAt`, `updatedAt`) VALUES (1, 'Увін Дмитро', 'uvindmytro@gmail.com', NULL, 'dmitriyuvin', 'hash', 'https://google.com/avatar.png', '2020-11-19 11:45:56', NULL);
@@ -198,9 +164,6 @@ INSERT INTO `projects_lab`.`users` (`id`, `name`, `email`, `email_verified_at`, 
 COMMIT;
 
 
--- -----------------------------------------------------
--- Data for table `projects_lab`.`tasks`
--- -----------------------------------------------------
 START TRANSACTION;
 USE `projects_lab`;
 INSERT INTO `projects_lab`.`tasks` (`id`, `project_id`, `name`, `description`, `status`, `deadline`, `createdAt`, `updatedAt`) VALUES (1, 1, 'Створити базу даних', 'Створення бази даних з допомогою MySQL Server & Workbench', 'done', '2020-11-20 10:00:00', '2020-11-17 10:00:00', '2020-11-19 20:00:00');
@@ -210,9 +173,6 @@ INSERT INTO `projects_lab`.`tasks` (`id`, `project_id`, `name`, `description`, `
 COMMIT;
 
 
--- -----------------------------------------------------
--- Data for table `projects_lab`.`project_user`
--- -----------------------------------------------------
 START TRANSACTION;
 USE `projects_lab`;
 INSERT INTO `projects_lab`.`project_user` (`id`, `project_id`, `user_id`, `role`) VALUES (1, 1, 1, 'TeamLead');
@@ -225,10 +185,6 @@ INSERT INTO `projects_lab`.`project_user` (`id`, `project_id`, `user_id`, `role`
 
 COMMIT;
 
-
--- -----------------------------------------------------
--- Data for table `projects_lab`.`task_user`
--- -----------------------------------------------------
 START TRANSACTION;
 USE `projects_lab`;
 INSERT INTO `projects_lab`.`task_user` (`id`, `task_id`, `user_id`) VALUES (1, 1, 1);
@@ -241,20 +197,12 @@ INSERT INTO `projects_lab`.`task_user` (`id`, `task_id`, `user_id`) VALUES (7, 3
 
 COMMIT;
 
-
--- -----------------------------------------------------
--- Data for table `projects_lab`.`artifacts`
--- -----------------------------------------------------
 START TRANSACTION;
 USE `projects_lab`;
 INSERT INTO `projects_lab`.`artifacts` (`id`, `name`, `type`, `description`, `link`) VALUES (1, 'Документація з репозиторію', 'text/plain', 'Документація для кожного підрозділу з репозиторію', 'https://github.com/dmitriy-uvin/operating_project_system');
 
 COMMIT;
 
-
--- -----------------------------------------------------
--- Data for table `projects_lab`.`artifact_task`
--- -----------------------------------------------------
 START TRANSACTION;
 USE `projects_lab`;
 INSERT INTO `projects_lab`.`artifact_task` (`id`, `artefact_id`, `task_id`) VALUES (1, 1, 1);
